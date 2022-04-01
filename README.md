@@ -22,7 +22,7 @@ This website is built to return the value of a given number in to count from zer
 
 ## Setup/Installation Requirements
 
-- Fork this [Github](https://github.com/MeronTekie/Mr.Roboger-s-Neighborhood.git) link and clone it to your machine
+- Fork this [Github](https://github.com/MeronTekie/MrRogobers-Neighborhood.git) link and clone it to your machine
 - Navigate through the directory
 - Select the index.html File
 - Click index.html file , you machine's browser (_Chrome is highly recommended_)should be able to run the file
