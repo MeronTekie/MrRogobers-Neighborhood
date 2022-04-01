@@ -17,15 +17,21 @@
   </head>
   <body>
     <div class="container">
+      <h1 class="jumbotron col-12">Mr. Roboger's Neighborhood!</h1>
       <form id="beepBoop">
         <label for="number" class="form"
           >Hi neighbor,What is your favorite number?</label
         >
         <input id="number" class="form-control" type="number" />
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="row justify-content-center space">
+          <button type="submit" class="btn btn-primary row col-3">
+            Submit
+          </button>
+        </div>
       </form>
-      <div id="result" class="hidden">
-        <h1 id="output"></h1>
+      <br />
+      <div id="result" class="hidden row justify-content-center space">
+        <h1 id="output" class="col-6"></h1>
       </div>
     </div>
   </body>
