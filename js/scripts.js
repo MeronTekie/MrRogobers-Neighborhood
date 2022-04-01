@@ -26,18 +26,18 @@ function beepBoopArray(newArray) {
 $(document).ready(function () {
   $("form#beepBoop").submit(function (event) {
     event.preventDefault();
-    $("#output").addClass();
+    $("div#result").addClass("hidden");
     const zero = '["0"]';
     let num = parseInt($("#number").val());
     let newArray = beepBoop(num);
     let finalArray = beepBoopArray(newArray);
 
     if (num == 0) {
-      $("#output").removeClass("hidden");
+      $("div#result").removeClass("hidden");
       $("#output").text(zero);
     } else {
-      $("#output").removeClass("hidden");
-      $("#output").text("");
+      $("div#result").removeClass("hidden");
+
       $("#output").text(finalArray);
     }
   });
