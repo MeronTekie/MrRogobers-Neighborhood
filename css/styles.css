@@ -1,9 +1,13 @@
 .hidden {
   display: none;
 }
+.nimo {
+  text-align: center;
+  color: rgb(0, 0, 7);
+}
 body {
   font-size: 50px;
-  background-color: rgb(227, 249, 255);
+  background-color: rgb(195, 190, 191);
 }
 h1 {
   font-size: 75px;

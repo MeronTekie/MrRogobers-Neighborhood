@@ -22,11 +22,10 @@ function beepBoopArray(newArray) {
 }
 
 // User Interface Logic
+
 $(document).ready(function () {
   $("form#beepBoop").submit(function (event) {
     event.preventDefault();
-
-    $("#result").addClass("hidden");
 
     const zero = '["0"]';
     const num = parseInt($("#number").val());
@@ -34,11 +33,11 @@ $(document).ready(function () {
     const finalArray = beepBoopArray(newArray);
 
     if (num == 0) {
-      $("#result").removeClass("hidden");
-      $("#output").text(zero);
+      $("#error").removeClass("hidden");
+      $("#error").text(zero);
     } else {
-      $("#result").removeClass("hidden");
-      $("#output").text(finalArray);
+      $("#error").removeClass("hidden");
+      $("#error").text(finalArray);
     }
   });
 });
