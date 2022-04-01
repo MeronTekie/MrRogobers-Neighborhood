@@ -26,7 +26,7 @@ function beepBoopArray(newArray) {
 $(document).ready(function () {
   $("form#beepBoop").submit(function (event) {
     event.preventDefault();
-    $("div#result").addClass("hidden");
+
     const zero = '["0"]';
     let num = parseInt($("#number").val());
     let newArray = beepBoop(num);
@@ -37,7 +37,6 @@ $(document).ready(function () {
       $("#output").text(zero);
     } else {
       $("div#result").removeClass("hidden");
-
       $("#output").text(finalArray);
     }
   });
