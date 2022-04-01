@@ -15,7 +15,7 @@ function beepBoopArray(newArray) {
     } else if (numString.match(2)) {
       newArray[i] = '"Boop"';
     } else if (numString.match(1)) {
-      newArray[i] = '"Beep!"';
+      newArray[i] = '"Beep"';
     }
   }
   return newArray;
@@ -26,21 +26,19 @@ function beepBoopArray(newArray) {
 $(document).ready(function () {
   $("form#beepBoop").submit(function (event) {
     event.preventDefault();
+    $("#output").addClass();
+    const zero = '["0"]';
+    let num = parseInt($("#number").val());
+    let newArray = beepBoop(num);
+    let finalArray = beepBoopArray(newArray);
 
-    // const zero = '["0"]';
-    const num = parseInt($("#number").val());
-    const newArray = beepBoop(num);
-    const finalArray = beepBoopArray(newArray);
-
-    // if (num == 0) {
-    //   $("#result").addClass("hidden");
-    //   $("#result").removeClass("hidden");
-    //   $("#output").text(zero);
-    // } else {
-    $("#result").toggle();
-
-    // $("#result").removeClass("hidden");
-    $("#output").html(finalArray);
-    // }
+    if (num == 0) {
+      $("#output").removeClass("hidden");
+      $("#output").text(zero);
+    } else {
+      $("#output").removeClass("hidden");
+      $("#output").text("");
+      $("#output").text(finalArray);
+    }
   });
 });
