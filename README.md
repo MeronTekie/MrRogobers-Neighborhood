@@ -8,3 +8,10 @@
 
 - Code:beepBoop(0)
 - Expected Output:[0];
+
+## Describe: beepBoopArray()
+
+-- Test: "It should replace*"Wont you be my neighbor?"* for any array vlaue that has 3 number on it"
+
+- Code: beepBoop(5);
+- Expected Output: [0, 1, 2, "Wont you be my neighbor?", 4, 5]
