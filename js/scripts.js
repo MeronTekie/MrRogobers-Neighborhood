@@ -27,14 +27,14 @@ $(document).ready(function () {
   $("form#beepBoop").submit(function (event) {
     event.preventDefault();
 
-    const zero = '["0"]';
+    const errorMessage = " Make sure you put values 0 and above!";
     let num = parseInt($("#number").val());
     let newArray = beepBoop(num);
     let finalArray = beepBoopArray(newArray);
 
-    if (num == 0) {
+    if (num < 0) {
       $("div#result").removeClass("hidden");
-      $("#output").text(zero);
+      $("#output").text(errorMessage);
     } else {
       $("div#result").removeClass("hidden");
       $("#output").text(finalArray);
