@@ -1,24 +1,31 @@
 //Business Logic
-let array = [];
+
 function beepBoop(num) {
+  let array = [];
   for (let i = 0; i <= num; i++) {
     array.push(i);
   }
+  console.log(array);
   return array;
 }
 function beepBoopArray(newArray) {
-  for (i = 1; i < newArray.length; i++) {
-    let numString = newArray[i];
-    numString = numString.toString();
+  console.log(newArray);
+  let newOne = [];
+  for (i = 0; i < newArray.length; i++) {
+    let numString = newArray[i].toString();
     if (numString.match(3)) {
-      newArray[i] = '"Wont you be my neighbor?"';
+      newOne.push('"Wont you be my neighbor?"');
     } else if (numString.match(2)) {
-      newArray[i] = '"Boop"';
+      newOne.push('"Boop"');
     } else if (numString.match(1)) {
-      newArray[i] = '"Beep"';
+      newOne.push('"Beep"');
+    } else {
+      newOne.push(numString);
     }
   }
-  return newArray;
+
+  let resultArray = newOne;
+  return resultArray;
 }
 
 // User Interface Logic
@@ -30,14 +37,14 @@ $(document).ready(function () {
     const errorMessage = " Make sure you put values 0 and above!";
     let num = parseInt($("#number").val());
     let newArray = beepBoop(num);
-    let finalArray = beepBoopArray(newArray);
+    const finalArray = beepBoopArray(newArray);
 
     if (num < 0) {
       $("div#result").removeClass("hidden");
       $("#output").text(errorMessage);
     } else {
       $("div#result").removeClass("hidden");
-      $("#output").text(finalArray);
+      $("#output").html(finalArray.toString(","));
     }
   });
 });
