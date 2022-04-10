@@ -14,7 +14,7 @@ function beepBoopArray(newArray) {
   for (i = 0; i < newArray.length; i++) {
     let numString = newArray[i].toString();
     if (numString.match(3)) {
-      newOne.push('"Wont you be my neighbor?"');
+      newOne.push("' Won't you be my neighbor?'");
     } else if (numString.match(2)) {
       newOne.push('"Boop"');
     } else if (numString.match(1)) {
